@@ -25,10 +25,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: ESLint
-        run: npm run lint
+      - name: Lint
+        run: npx next lint
 
       - name: Build
         run: npm run build
         env:
-          NEXT_PUBLIC_SITE_URL: ${{ vars.NEXT_PUBLIC_SITE_URL || 'https://www.eltheman.co.uk' }}
+          NEXT_PUBLIC_SITE_URL: https://www.eltheman.co.uk
