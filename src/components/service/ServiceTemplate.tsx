@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import Container from '@/components/ui/Container'
 import Button from '@/components/ui/Button'
@@ -6,6 +7,7 @@ import SchemaScript from '@/components/schema/SchemaScript'
 import { ServiceData, getRelatedServices } from '@/lib/services'
 import { LocationData } from '@/lib/locations'
 import { buildServiceSchema, buildFAQSchema } from '@/lib/schema'
+import { getServiceImages, getServiceHeroImage } from '@/lib/service-images'
 
 interface ServiceTemplateProps {
   service: ServiceData
@@ -16,6 +18,8 @@ interface ServiceTemplateProps {
 export default function ServiceTemplate({ service, location, breadcrumbs }: ServiceTemplateProps) {
   const locationName = location?.name ?? 'Walsall'
   const relatedServices = getRelatedServices(service.slug)
+  const heroImage = getServiceHeroImage(service.slug)
+  const galleryImages = getServiceImages(service.slug)
   const schemas = [
     buildServiceSchema(service, locationName),
     buildFAQSchema(service.faqs),
@@ -33,32 +37,45 @@ export default function ServiceTemplate({ service, location, breadcrumbs }: Serv
       <section className="bg-[#0F1A2E] py-12 md:py-16" aria-label="Service overview">
         <div className="absolute top-0 left-0 right-0 h-0.5 bg-[#C9933A]" aria-hidden="true" />
         <Container>
-          <div className="max-w-3xl">
-            {location && (
-              <p className="text-[#C9933A] text-sm font-semibold uppercase tracking-wider mb-2">
-                {location.name}, {location.county}
+          <div className={`grid gap-10 items-center ${heroImage ? 'grid-cols-1 lg:grid-cols-2' : 'grid-cols-1'}`}>
+            <div className={heroImage ? '' : 'max-w-3xl'}>
+              {location && (
+                <p className="text-[#C9933A] text-sm font-semibold uppercase tracking-wider mb-2">
+                  {location.name}, {location.county}
+                </p>
+              )}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white font-display mb-4 leading-tight">
+                {service.title}{location ? ` in ${location.name}` : ' in Walsall'}
+              </h1>
+              <p className="text-lg text-[#C9933A] font-medium mb-4">{service.tagline}</p>
+              <p className="text-white/80 text-base leading-relaxed mb-6 max-w-2xl">
+                {service.definition}
               </p>
-            )}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white font-display mb-4 leading-tight">
-              {service.title}{location ? ` in ${location.name}` : ' in Walsall'}
-            </h1>
-            <p className="text-lg text-[#C9933A] font-medium mb-4">{service.tagline}</p>
-            {/* Direct answer — first 40-60 words, above the fold */}
-            <p className="text-white/80 text-base leading-relaxed mb-6 max-w-2xl">
-              {service.definition}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="tel:+447861203087"
-                className="inline-flex items-center justify-center gap-2 bg-[#C9933A] hover:bg-[#B07F2A] text-white font-bold py-4 px-6 rounded-xl transition-colors"
-              >
-                <PhoneIcon />
-                Call 07861 203087
-              </a>
-              <Button href="/contact" variant="ghost" className="border-white/30 text-white hover:bg-white/10">
-                Get a free quote
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="tel:+447861203087"
+                  className="inline-flex items-center justify-center gap-2 bg-[#C9933A] hover:bg-[#B07F2A] text-white font-bold py-4 px-6 rounded-xl transition-colors"
+                >
+                  <PhoneIcon />
+                  Call 07861 203087
+                </a>
+                <Button href="/contact" variant="ghost" className="border-white/30 text-white hover:bg-white/10">
+                  Get a free quote
+                </Button>
+              </div>
             </div>
+            {heroImage && (
+              <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src={heroImage.src}
+                  alt={heroImage.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+              </div>
+            )}
           </div>
         </Container>
       </section>
@@ -251,6 +268,29 @@ export default function ServiceTemplate({ service, location, breadcrumbs }: Serv
               ))}
             </div>
           </section>
+
+          {/* ── Photo gallery — real job photos ── */}
+          {galleryImages.length > 0 && (
+            <section aria-labelledby="gallery-heading">
+              <h2 id="gallery-heading" className="text-2xl font-bold font-display text-[#0F1A2E] mb-6">
+                Our {service.shortTitle.toLowerCase()} work in {locationName}
+              </h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {galleryImages.map((img, i) => (
+                  <div key={i} className="relative aspect-square rounded-xl overflow-hidden bg-[#E8E0D4]">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      className="object-cover hover:scale-105 transition-transform duration-300"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 22vw"
+                      loading={i < 3 ? 'eager' : 'lazy'}
+                    />
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
 
         {/* ── Sidebar ── */}

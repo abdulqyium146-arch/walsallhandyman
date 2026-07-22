@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import Container from '@/components/ui/Container'
 import Button from '@/components/ui/Button'
 import { SERVICES, SERVICE_CATEGORIES } from '@/lib/services'
 import { LOCATIONS } from '@/lib/locations'
+import { getServiceHeroImage } from '@/lib/service-images'
 
 export const metadata: Metadata = {
   title: 'El The Man — Walsall Handyman Services | Interior, Exterior, Maintenance & Emergency',
@@ -138,24 +140,45 @@ export default function HomePage() {
             From a single odd job to a full property refurbishment — most-requested services.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredServices.map((service) => (
-              <Link
-                key={service.slug}
-                href={`/services/${service.slug}`}
-                className="group bg-[#F8F4EE] rounded-xl p-6 border border-[#E8E0D4] hover:border-[#C9933A] hover:bg-white transition-all duration-200 hover:shadow-[0_4px_16px_0_rgba(201,147,58,0.10)]"
-              >
-                <span className={`inline-block text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded mb-3 ${categoryBadge(service.category)}`}>
-                  {service.category}
-                </span>
-                <h3 className="font-bold text-lg text-[#0F1A2E] font-display mb-2 group-hover:text-[#C9933A] transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-[#718096] leading-relaxed line-clamp-2">{service.tagline}</p>
-                <span className="mt-4 inline-block text-[#C9933A] text-sm font-semibold group-hover:underline">
-                  Learn more &rarr;
-                </span>
-              </Link>
-            ))}
+            {featuredServices.map((service) => {
+              const heroImg = getServiceHeroImage(service.slug)
+              return (
+                <Link
+                  key={service.slug}
+                  href={`/services/${service.slug}`}
+                  className="group bg-[#F8F4EE] rounded-xl border border-[#E8E0D4] hover:border-[#C9933A] hover:bg-white transition-all duration-200 hover:shadow-[0_4px_16px_0_rgba(201,147,58,0.10)] overflow-hidden flex flex-col"
+                >
+                  {heroImg ? (
+                    <div className="relative h-44 w-full flex-shrink-0">
+                      <Image
+                        src={heroImg.src}
+                        alt={heroImg.alt}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        loading="lazy"
+                      />
+                    </div>
+                  ) : (
+                    <div className="h-44 w-full bg-[#1B2B4B] flex items-center justify-center text-[#C9933A] text-4xl flex-shrink-0">
+                      <span aria-hidden="true">🔧</span>
+                    </div>
+                  )}
+                  <div className="p-5 flex flex-col flex-1">
+                    <span className={`inline-block text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded mb-3 w-fit ${categoryBadge(service.category)}`}>
+                      {service.category}
+                    </span>
+                    <h3 className="font-bold text-lg text-[#0F1A2E] font-display mb-2 group-hover:text-[#C9933A] transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-[#718096] leading-relaxed line-clamp-2 flex-1">{service.tagline}</p>
+                    <span className="mt-4 inline-block text-[#C9933A] text-sm font-semibold group-hover:underline">
+                      Learn more &rarr;
+                    </span>
+                  </div>
+                </Link>
+              )
+            })}
           </div>
           <div className="mt-8 text-center">
             <Button href="/services" variant="secondary" size="lg">View all services</Button>
