@@ -55,9 +55,7 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
 
-  experimental: {
-    optimizeCss: true,
-  },
+  experimental: {},
 }
 
 export default nextConfig

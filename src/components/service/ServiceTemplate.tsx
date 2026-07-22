@@ -277,7 +277,7 @@ export default function ServiceTemplate({ service, location, breadcrumbs }: Serv
               </h2>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {galleryImages.map((img, i) => (
-                  <div key={i} className="relative aspect-square rounded-xl overflow-hidden bg-[#E8E0D4]">
+                  <div key={i} className="relative h-44 rounded-xl overflow-hidden bg-[#E8E0D4]">
                     <Image
                       src={img.src}
                       alt={img.alt}

@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
+    "lint": "eslint src/",
     "lint:content": "npx ts-node --esm scripts/lint-content.ts",
     "prebuild": "echo 'Run npm run lint:content to validate content quality before building'"
   },
