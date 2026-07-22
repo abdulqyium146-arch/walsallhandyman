@@ -1,0 +1,920 @@
+[
+  {
+    "pillar": "painting-decorating",
+    "subtopic": "interior-painting",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/painting-decorating",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "painting-decorating",
+    "subtopic": "interior-painting-cost",
+    "search_intent": "commercial",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/painting-decorating",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "painting-decorating",
+    "subtopic": "exterior-painting",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/exterior-painting",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "painting-decorating",
+    "subtopic": "how-many-coats-of-paint",
+    "search_intent": "informational",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/blog/how-many-coats-of-paint",
+    "parent_slug": "/blog",
+    "status": "build"
+  },
+  {
+    "pillar": "painting-decorating",
+    "subtopic": "landlord-painting-between-tenants",
+    "search_intent": "commercial",
+    "audience_segment": "landlords",
+    "target_page_slug": "/services/painting-decorating",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "painting-decorating",
+    "subtopic": "painting-decorating-walsall",
+    "search_intent": "navigational",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/painting-decorating/walsall",
+    "parent_slug": "/services/painting-decorating",
+    "status": "build"
+  },
+  {
+    "pillar": "carpentry",
+    "subtopic": "door-fitting",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/door-fitting",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "carpentry",
+    "subtopic": "door-fitting-cost",
+    "search_intent": "commercial",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/door-fitting",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "carpentry",
+    "subtopic": "skirting-boards",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/skirting-boards",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "carpentry",
+    "subtopic": "shelving-installation",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/shelving-installation",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "carpentry",
+    "subtopic": "architrave-fitting",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/carpentry",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "carpentry",
+    "subtopic": "carpentry-walsall",
+    "search_intent": "navigational",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/carpentry/walsall",
+    "parent_slug": "/services/carpentry",
+    "status": "build"
+  },
+  {
+    "pillar": "flooring",
+    "subtopic": "laminate-flooring-installation",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/flooring",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "flooring",
+    "subtopic": "laminate-vs-vinyl-flooring",
+    "search_intent": "comparison",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/blog/laminate-vs-vinyl-flooring",
+    "parent_slug": "/blog",
+    "status": "build"
+  },
+  {
+    "pillar": "flooring",
+    "subtopic": "flooring-cost-uk",
+    "search_intent": "commercial",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/flooring",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "flooring",
+    "subtopic": "landlord-flooring-between-tenants",
+    "search_intent": "commercial",
+    "audience_segment": "landlords",
+    "target_page_slug": "/services/flooring",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "tiling",
+    "subtopic": "bathroom-tiling",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/tiling",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "tiling",
+    "subtopic": "kitchen-splashback-tiling",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/tiling",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "tiling",
+    "subtopic": "tiling-cost-per-m2-uk",
+    "search_intent": "commercial",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/tiling",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "tiling",
+    "subtopic": "replace-cracked-tile",
+    "search_intent": "informational",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/blog/how-to-replace-a-cracked-tile",
+    "parent_slug": "/blog",
+    "status": "build"
+  },
+  {
+    "pillar": "plastering",
+    "subtopic": "plastering-skim-coat",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/plastering",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "plastering",
+    "subtopic": "artex-removal",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/plastering",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "plastering",
+    "subtopic": "plasterboard-installation",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/plastering",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "furniture-assembly",
+    "subtopic": "flat-pack-assembly",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/furniture-assembly",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "furniture-assembly",
+    "subtopic": "ikea-assembly",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/furniture-assembly",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "furniture-assembly",
+    "subtopic": "wardrobe-assembly",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/furniture-assembly",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "furniture-assembly",
+    "subtopic": "office-furniture-assembly",
+    "search_intent": "transactional",
+    "audience_segment": "offices",
+    "target_page_slug": "/services/furniture-assembly",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "tv-mounting",
+    "subtopic": "tv-wall-mounting",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/tv-mounting",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "tv-mounting",
+    "subtopic": "tv-mounting-above-fireplace",
+    "search_intent": "informational",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/blog/tv-mounting-above-fireplace",
+    "parent_slug": "/blog",
+    "status": "build"
+  },
+  {
+    "pillar": "tv-mounting",
+    "subtopic": "hide-tv-cables",
+    "search_intent": "informational",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/blog/hide-tv-cables-wall",
+    "parent_slug": "/blog",
+    "status": "build"
+  },
+  {
+    "pillar": "shelving-storage",
+    "subtopic": "shelving-installation",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/shelving-installation",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "shelving-storage",
+    "subtopic": "alcove-shelving",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/shelving-installation",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "shelving-storage",
+    "subtopic": "floating-shelves",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/shelving-installation",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "curtain-blinds",
+    "subtopic": "curtain-rail-fitting",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/curtain-blind-fitting",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "curtain-blinds",
+    "subtopic": "blind-installation",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/curtain-blind-fitting",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "picture-mirror-hanging",
+    "subtopic": "mirror-hanging",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/picture-mirror-hanging",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "picture-mirror-hanging",
+    "subtopic": "large-picture-hanging",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/picture-mirror-hanging",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "door-repairs",
+    "subtopic": "sticking-door-repair",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/door-fitting",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "door-repairs",
+    "subtopic": "door-lock-change",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/lock-changes",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "door-repairs",
+    "subtopic": "uPVC-door-adjustment",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/door-fitting",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "lock-changes",
+    "subtopic": "landlord-lock-change-between-tenants",
+    "search_intent": "commercial",
+    "audience_segment": "landlords",
+    "target_page_slug": "/services/lock-changes",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "lock-changes",
+    "subtopic": "emergency-lock-change",
+    "search_intent": "emergency",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/emergency-repairs",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "lock-changes",
+    "subtopic": "british-standard-lock",
+    "search_intent": "informational",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/blog/british-standard-locks-explained",
+    "parent_slug": "/blog",
+    "status": "build"
+  },
+  {
+    "pillar": "bathroom-repairs",
+    "subtopic": "silicone-sealing",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/silicone-sealing",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "bathroom-repairs",
+    "subtopic": "shower-repairs",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/bathroom-repairs",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "bathroom-repairs",
+    "subtopic": "leaking-tap-repair",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/bathroom-repairs",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "bathroom-repairs",
+    "subtopic": "bathroom-repairs-landlord",
+    "search_intent": "commercial",
+    "audience_segment": "landlords",
+    "target_page_slug": "/services/bathroom-repairs",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "silicone-sealing",
+    "subtopic": "bath-silicone-replacement",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/silicone-sealing",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "silicone-sealing",
+    "subtopic": "silicone-lifespan",
+    "search_intent": "informational",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/blog/how-long-does-silicone-sealant-last",
+    "parent_slug": "/blog",
+    "status": "build"
+  },
+  {
+    "pillar": "minor-plumbing",
+    "subtopic": "tap-replacement",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/minor-plumbing",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "minor-plumbing",
+    "subtopic": "toilet-repair",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/minor-plumbing",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "minor-plumbing",
+    "subtopic": "blocked-drain-clearing",
+    "search_intent": "emergency",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/minor-plumbing",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "minor-electrical",
+    "subtopic": "light-fitting-replacement",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/minor-electrical",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "minor-electrical",
+    "subtopic": "socket-switch-replacement",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/minor-electrical",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "minor-electrical",
+    "subtopic": "part-p-competent-person-scheme",
+    "search_intent": "informational",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/blog/part-p-electrical-regulations-uk",
+    "parent_slug": "/blog",
+    "status": "build"
+  },
+  {
+    "pillar": "window-repairs",
+    "subtopic": "uPVC-window-repair",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/window-repairs",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "window-repairs",
+    "subtopic": "blown-double-glazing-repair",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/window-repairs",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "window-repairs",
+    "subtopic": "window-lock-repair",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/window-repairs",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "kitchen-fitting",
+    "subtopic": "kitchen-installation",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/kitchen-fitting",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "kitchen-fitting",
+    "subtopic": "flat-pack-kitchen-assembly",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/kitchen-fitting",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "kitchen-fitting",
+    "subtopic": "kitchen-worktop-installation",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/kitchen-fitting",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "pressure-washing",
+    "subtopic": "driveway-cleaning",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/pressure-washing",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "pressure-washing",
+    "subtopic": "patio-cleaning",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/pressure-washing",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "pressure-washing",
+    "subtopic": "render-cleaning",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/pressure-washing",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "pressure-washing",
+    "subtopic": "seasonal-spring-driveway-cleaning",
+    "search_intent": "seasonal",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/pressure-washing",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "fence-repairs",
+    "subtopic": "fence-panel-replacement",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/fence-repairs",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "fence-repairs",
+    "subtopic": "fence-post-replacement",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/fence-repairs",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "fence-repairs",
+    "subtopic": "storm-damaged-fence-repair",
+    "search_intent": "emergency",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/fence-repairs",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "fence-repairs",
+    "subtopic": "who-is-responsible-for-fence",
+    "search_intent": "informational",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/blog/who-is-responsible-for-garden-fence",
+    "parent_slug": "/blog",
+    "status": "build"
+  },
+  {
+    "pillar": "decking",
+    "subtopic": "decking-installation",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/decking",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "decking",
+    "subtopic": "decking-repair",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/decking",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "decking",
+    "subtopic": "composite-vs-timber-decking",
+    "search_intent": "comparison",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/blog/composite-vs-timber-decking",
+    "parent_slug": "/blog",
+    "status": "build"
+  },
+  {
+    "pillar": "garden-maintenance",
+    "subtopic": "garden-tidy-up",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/garden-maintenance",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "garden-maintenance",
+    "subtopic": "hedge-trimming",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/garden-maintenance",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "garden-maintenance",
+    "subtopic": "void-property-garden-clearance",
+    "search_intent": "commercial",
+    "audience_segment": "landlords",
+    "target_page_slug": "/services/garden-maintenance",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "shed-repairs",
+    "subtopic": "shed-felt-replacement",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/shed-repairs",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "shed-repairs",
+    "subtopic": "shed-door-repair",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/shed-repairs",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "gutter-cleaning",
+    "subtopic": "gutter-clearing",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/gutter-cleaning",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "gutter-cleaning",
+    "subtopic": "autumn-gutter-maintenance",
+    "search_intent": "seasonal",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/gutter-cleaning",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "gutter-cleaning",
+    "subtopic": "commercial-gutter-clearing",
+    "search_intent": "commercial",
+    "audience_segment": "facilities-managers",
+    "target_page_slug": "/services/gutter-cleaning",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "emergency-repairs",
+    "subtopic": "emergency-handyman-walsall",
+    "search_intent": "emergency",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/emergency-repairs",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "emergency-repairs",
+    "subtopic": "emergency-door-repair",
+    "search_intent": "emergency",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/emergency-repairs",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "emergency-repairs",
+    "subtopic": "flood-damage-repair",
+    "search_intent": "emergency",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/emergency-repairs",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "landlord-services",
+    "subtopic": "landlord-handyman-walsall",
+    "search_intent": "commercial",
+    "audience_segment": "landlords",
+    "target_page_slug": "/services/landlord-services",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "landlord-services",
+    "subtopic": "end-of-tenancy-repairs",
+    "search_intent": "commercial",
+    "audience_segment": "landlords",
+    "target_page_slug": "/services/landlord-services",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "landlord-services",
+    "subtopic": "void-property-maintenance",
+    "search_intent": "commercial",
+    "audience_segment": "landlords",
+    "target_page_slug": "/services/landlord-services",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "landlord-services",
+    "subtopic": "letting-agent-maintenance",
+    "search_intent": "commercial",
+    "audience_segment": "letting-agents",
+    "target_page_slug": "/services/landlord-services",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "commercial-handyman",
+    "subtopic": "commercial-handyman-walsall",
+    "search_intent": "commercial",
+    "audience_segment": "facilities-managers",
+    "target_page_slug": "/services/commercial-handyman",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "commercial-handyman",
+    "subtopic": "office-maintenance",
+    "search_intent": "commercial",
+    "audience_segment": "offices",
+    "target_page_slug": "/services/commercial-handyman",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "commercial-handyman",
+    "subtopic": "retail-maintenance",
+    "search_intent": "commercial",
+    "audience_segment": "retail",
+    "target_page_slug": "/services/commercial-handyman",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "commercial-handyman",
+    "subtopic": "hospitality-maintenance",
+    "search_intent": "commercial",
+    "audience_segment": "hospitality",
+    "target_page_slug": "/services/commercial-handyman",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "maintenance-contracts",
+    "subtopic": "monthly-maintenance-contract",
+    "search_intent": "commercial",
+    "audience_segment": "landlords",
+    "target_page_slug": "/services/maintenance-contracts",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "maintenance-contracts",
+    "subtopic": "planned-preventive-maintenance",
+    "search_intent": "commercial",
+    "audience_segment": "facilities-managers",
+    "target_page_slug": "/services/maintenance-contracts",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "loft-conversion",
+    "subtopic": "loft-boarding",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/loft-boarding",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "loft-conversion",
+    "subtopic": "loft-hatch-installation",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/loft-boarding",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "garage",
+    "subtopic": "garage-door-repair",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/garage-door-repair",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "garage",
+    "subtopic": "garage-conversion-prep",
+    "search_intent": "transactional",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/services/garage-door-repair",
+    "parent_slug": "/services",
+    "status": "build"
+  },
+  {
+    "pillar": "handyman-general",
+    "subtopic": "handyman-near-me-walsall",
+    "search_intent": "navigational",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/",
+    "parent_slug": "/",
+    "status": "build"
+  },
+  {
+    "pillar": "handyman-general",
+    "subtopic": "how-much-does-a-handyman-cost-uk",
+    "search_intent": "commercial",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/blog/handyman-cost-guide-uk",
+    "parent_slug": "/blog",
+    "status": "build"
+  },
+  {
+    "pillar": "handyman-general",
+    "subtopic": "when-to-call-a-handyman-vs-tradesperson",
+    "search_intent": "professional-advice",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/blog/handyman-vs-tradesperson",
+    "parent_slug": "/blog",
+    "status": "build"
+  },
+  {
+    "pillar": "handyman-general",
+    "subtopic": "is-handyman-work-insured",
+    "search_intent": "safety",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/about",
+    "parent_slug": "/",
+    "status": "build"
+  },
+  {
+    "pillar": "handyman-general",
+    "subtopic": "diy-vs-professional-handyman",
+    "search_intent": "diy",
+    "audience_segment": "homeowners",
+    "target_page_slug": "/blog/diy-vs-professional-handyman",
+    "parent_slug": "/blog",
+    "status": "build"
+  }
+]

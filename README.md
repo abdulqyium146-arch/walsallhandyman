@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# El The Man — Walsall Handyman Services
 
-## Getting Started
+Semantic SEO website for **El The Man**, a Walsall-based handyman service covering the West Midlands.
+Built with Next.js 16 (App Router) + Tailwind CSS v4 + TypeScript.
 
-First, run the development server:
+---
+
+## Quick start
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev          # → http://localhost:3000
+npm run build        # production static export
+npm run lint:content # content quality checks (run before building)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How to add a new service
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Add to `src/lib/services.ts`** — copy an existing `ServiceData` object and populate all required fields.
 
-## Learn More
+   Required: `slug`, `title`, `shortTitle`, `category`, `tagline`, `definition` (40+ words), `whoNeedsIt`, `signsYouNeedIt` (3+), `process` (3+ steps), `toolsAndMaterials`, `safetyConsiderations`, `costFactors`, `costRangeNote`, `lifespan`, `commonMistakes`, `diyVsPro`, `faqs` (4+), `relatedServiceSlugs` (2+), `schemaServiceType`, `synonyms`.
 
-To learn more about Next.js, take a look at the following resources:
+2. **Add topical-map entries** — add at least `transactional`, `informational`, and `commercial` intent entries in `src/lib/data/topical-map.json`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Add entity graph entries** — add a node and its edges in `src/lib/data/entities.json`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Run lint** — `npm run lint:content` — fix any errors.
 
-## Deploy on Vercel
+5. **Done.** `/services/{slug}` and all `/services/{slug}/{location}` pages generate automatically.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## How to add a new location
+
+1. **Add to `src/lib/data/locations.json`** — add a new object with:
+   `slug`, `name`, `county`, `postcodes[]`, `type` (`primary`/`local`/`nearby`), `description` (unique local text), `localLandmarks[]`, `propertyTypes[]`, `commonRepairNeeds[]`, `seasonalIssues[]`, `councilArea`, `distanceFromBase`, `neighbourhoods[]`.
+
+2. **Done.** `/locations/{slug}` and all `/services/{service}/{slug}` pages generate automatically.
+
+---
+
+## Route architecture
+
+| Route | Source |
+|-------|--------|
+| `/` | `src/app/page.tsx` |
+| `/services` | `src/app/services/page.tsx` |
+| `/services/[service]` | `src/app/services/[service]/page.tsx` + `generateStaticParams` from `SERVICES` |
+| `/services/[service]/[location]` | `src/app/services/[service]/[location]/page.tsx` + all combos |
+| `/locations` | `src/app/locations/page.tsx` |
+| `/locations/[location]` | `src/app/locations/[location]/page.tsx` + `generateStaticParams` from `LOCATIONS` |
+| `/blog` | `src/app/blog/page.tsx` |
+| `/about` | `src/app/about/page.tsx` |
+| `/contact` | `src/app/contact/page.tsx` |
+
+---
+
+## Data files
+
+| File | Purpose |
+|------|---------|
+| `src/lib/services.ts` | Service definitions — content model for every service page |
+| `src/lib/data/topical-map.json` | Full topical map — drives content strategy + sitemap |
+| `src/lib/data/entities.json` | Entity graph — nodes/edges for schema + internal links |
+| `src/lib/data/locations.json` | Location profiles — drives location pages + service×location matrix |
+
+---
+
+## Schema generation
+
+`src/lib/schema.ts` exports:
+- `buildLocalBusinessSchema()` → injected in root `layout.tsx`
+- `buildServiceSchema(service, locationName)` → injected on every service page
+- `buildFAQSchema(faqs)` → injected on every service page
+- `buildBreadcrumbSchema(crumbs)` → injected via `<Breadcrumb>`
+
+---
+
+## Content quality lint
+
+`scripts/lint-content.ts` enforces the Section 12 quality bar:
+- Definition is 40+ words
+- All 14 content blocks present
+- FAQs have 4+ entries
+- Related services and internal links populated
+- `[NEEDS CLIENT INPUT]` placeholders flagged
+
+Run: `npm run lint:content`
+
+---
+
+## Brand / design tokens (Tailwind v4 `@theme`)
+
+| Token | Hex |
+|-------|-----|
+| `brand-navy` | `#1B2B4B` |
+| `brand-navy-dark` | `#0F1A2E` |
+| `brand-gold` | `#C9933A` |
+| `brand-gold-light` | `#E8B96A` |
+| `brand-cream` | `#F8F4EE` |
+| `brand-steel` | `#4A5568` |
+
+Fonts: **Playfair Display** (headings) · **DM Sans** (body) — self-hosted via `next/font/google`.
+
+---
+
+## [NEEDS CLIENT INPUT] — items to resolve before launch
+
+Search the codebase for `[NEEDS CLIENT INPUT` to find all placeholder instances. Key items:
+
+- Business address / postcode
+- Opening hours and emergency availability
+- Public liability insurance details
+- VAT number (if applicable)
+- Years in trade / founding date
+- Trade accreditations / scheme memberships
+- Payment methods accepted
+- Pricing ranges per service (confirm before publishing cost sections)
+- Paint supply policy (supply-and-fit vs. labour-only)
+- Packaging disposal policy (furniture assembly)
+- Before/after photo documentation service for landlords
+- Review and testimonial content

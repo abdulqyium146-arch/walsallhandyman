@@ -1,26 +1,111 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ─── Brand Design System ─── */
+/* Palette: navy/gold anchored to El The Man brand identity */
+/* Type: Playfair Display (display) + DM Sans (body) */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Brand colours */
+  --color-brand-navy:        #1B2B4B;
+  --color-brand-navy-dark:   #0F1A2E;
+  --color-brand-navy-mid:    #253A62;
+  --color-brand-gold:        #C9933A;
+  --color-brand-gold-light:  #E8B96A;
+  --color-brand-gold-pale:   #F7EDD8;
+  --color-brand-cream:       #F8F4EE;
+  --color-brand-white:       #FFFFFF;
+  --color-brand-steel:       #4A5568;
+  --color-brand-steel-light: #718096;
+  --color-brand-success:     #276749;
+  --color-brand-warning:     #92400E;
+  --color-brand-error:       #9B1C1C;
+
+  /* Semantic aliases */
+  --color-background:  var(--color-brand-cream);
+  --color-foreground:  var(--color-brand-navy-dark);
+
+  /* Typography scale */
+  --font-display: var(--font-playfair);
+  --font-sans:    var(--font-dm-sans);
+
+  /* Spacing scale additions */
+  --spacing-section: 5rem;
+
+  /* Border radius */
+  --radius-sm:  0.25rem;
+  --radius-md:  0.5rem;
+  --radius-lg:  1rem;
+  --radius-xl:  1.5rem;
+
+  /* Box shadow */
+  --shadow-card: 0 2px 12px 0 rgba(27, 43, 75, 0.10);
+  --shadow-cta:  0 4px 24px 0 rgba(201, 147, 58, 0.25);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─── Global base ─── */
+:root {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-brand-cream);
+  color: var(--color-brand-navy-dark);
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Heading hierarchy ─── */
+h1, h2, h3 {
+  font-family: var(--font-playfair), Georgia, serif;
+  line-height: 1.2;
+  color: var(--color-brand-navy-dark);
+}
+h4, h5, h6 {
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  font-weight: 700;
+  color: var(--color-brand-navy);
+}
+
+/* ─── Focus visible (accessibility) ─── */
+:focus-visible {
+  outline: 2px solid var(--color-brand-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ─── Prose content (service page body) ─── */
+.prose-brand {
+  max-width: 72ch;
+  color: var(--color-brand-steel);
+  line-height: 1.75;
+}
+.prose-brand p { margin-bottom: 1.25rem; }
+.prose-brand strong { color: var(--color-brand-navy-dark); }
+.prose-brand a { color: var(--color-brand-gold); text-decoration: underline; }
+.prose-brand a:hover { color: var(--color-brand-navy); }
+.prose-brand ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+.prose-brand ol { list-style: decimal; padding-left: 1.5rem; margin-bottom: 1.25rem; }
+.prose-brand li { margin-bottom: 0.5rem; }
+
+/* ─── Utility: section gap ─── */
+.section-gap {
+  padding-top: var(--spacing-section);
+  padding-bottom: var(--spacing-section);
+}
+
+/* ─── Sticky CTA bar ─── */
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: var(--color-brand-navy-dark);
+  border-top: 2px solid var(--color-brand-gold);
 }

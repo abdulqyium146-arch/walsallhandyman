@@ -1,0 +1,502 @@
+{
+  "nodes": [
+    {
+      "id": "el-the-man",
+      "type": "LocalBusiness",
+      "label": "El The Man",
+      "attributes": {
+        "name": "El The Man",
+        "tagline": "Can do it? Yes, we can.",
+        "category": "Handyman Services",
+        "phone": "+44 7861 203087",
+        "location": "Walsall, West Midlands, UK"
+      }
+    },
+    {
+      "id": "handyman-services",
+      "type": "ServiceCategory",
+      "label": "Handyman Services",
+      "attributes": {
+        "synonyms": ["property maintenance", "general repairs", "odd-job man", "maintenance contractor", "domestic repairs", "building maintenance"],
+        "hypernym": "tradesperson",
+        "hyponyms": ["painter-decorator", "carpenter", "tiler", "flooring-installer", "plumber", "electrician"]
+      }
+    },
+    {
+      "id": "painting-decorating",
+      "type": "Service",
+      "label": "Painting & Decorating",
+      "attributes": {
+        "slug": "painting-decorating",
+        "category": "interior",
+        "tools": ["roller", "paintbrush", "paint tray", "dust sheets", "filler", "sandpaper", "masking tape"],
+        "materials": ["emulsion paint", "gloss paint", "primer", "undercoat", "filler"],
+        "lifespan_years": "5-7 years interior, 3-5 years exterior",
+        "synonyms": ["decorating", "painting services", "interior painting", "exterior painting", "house painting"]
+      }
+    },
+    {
+      "id": "carpentry",
+      "type": "Service",
+      "label": "Carpentry",
+      "attributes": {
+        "slug": "carpentry",
+        "category": "interior",
+        "tools": ["circular saw", "jigsaw", "drill", "chisel", "plane", "router"],
+        "materials": ["MDF", "softwood", "hardwood", "plywood", "screws", "nails", "wood glue"],
+        "synonyms": ["joinery", "woodwork", "timber work"]
+      }
+    },
+    {
+      "id": "door-fitting",
+      "type": "Service",
+      "label": "Door Fitting & Repairs",
+      "attributes": {
+        "slug": "door-fitting",
+        "category": "interior",
+        "parent": "carpentry",
+        "tools": ["plane", "chisel", "drill", "screwdriver", "spirit level"],
+        "materials": ["internal door", "external door", "fire door", "hinges", "handle set", "weatherstrip"],
+        "synonyms": ["door installation", "door hanging", "door repair", "new door fitting"]
+      }
+    },
+    {
+      "id": "lock-changes",
+      "type": "Service",
+      "label": "Lock Changes",
+      "attributes": {
+        "slug": "lock-changes",
+        "category": "maintenance",
+        "parent": "carpentry",
+        "tools": ["chisel", "drill", "screwdriver"],
+        "materials": ["British Standard BS3621 lock", "euro cylinder", "deadbolt", "multipoint lock"],
+        "regulations": ["BS3621 insurance requirement"],
+        "synonyms": ["lock replacement", "lock upgrade", "new locks", "lock change"]
+      }
+    },
+    {
+      "id": "flooring",
+      "type": "Service",
+      "label": "Flooring Installation",
+      "attributes": {
+        "slug": "flooring",
+        "category": "interior",
+        "tools": ["pull bar", "tapping block", "jigsaw", "utility knife", "measuring tape", "underlay cutter"],
+        "materials": ["laminate flooring", "LVT vinyl", "engineered wood", "solid wood", "underlay", "expansion spacers"],
+        "lifespan_years": "laminate 15-25 years, LVT 20+ years, solid wood 30+ years",
+        "synonyms": ["floor fitting", "floor laying", "new floors", "laminate fitting", "vinyl fitting"]
+      }
+    },
+    {
+      "id": "tiling",
+      "type": "Service",
+      "label": "Tiling",
+      "attributes": {
+        "slug": "tiling",
+        "category": "interior",
+        "tools": ["tile cutter", "notched trowel", "grout float", "tile spacers", "spirit level"],
+        "materials": ["ceramic tiles", "porcelain tiles", "tile adhesive", "grout", "tile trim"],
+        "lifespan_years": "20-30 years tiles, 5-15 years grout",
+        "synonyms": ["tile fitting", "wall tiling", "floor tiling", "bathroom tiling", "kitchen tiling"]
+      }
+    },
+    {
+      "id": "plastering",
+      "type": "Service",
+      "label": "Plastering & Skimming",
+      "attributes": {
+        "slug": "plastering",
+        "category": "interior",
+        "tools": ["steel float", "hawk", "plasterer's trowel", "mixing bucket", "splash brush"],
+        "materials": ["finishing plaster", "bonding coat", "plasterboard", "joint tape", "scrim"],
+        "lifespan_years": "20-30 years with good maintenance",
+        "synonyms": ["skim coat", "plasterboard", "dry lining", "wall repair", "ceiling repair"]
+      }
+    },
+    {
+      "id": "furniture-assembly",
+      "type": "Service",
+      "label": "Furniture Assembly",
+      "attributes": {
+        "slug": "furniture-assembly",
+        "category": "interior",
+        "tools": ["Allen key", "screwdriver", "rubber mallet", "spirit level"],
+        "brands": ["IKEA", "Argos", "Wayfair", "NEXT", "John Lewis", "Amazon Basics"],
+        "synonyms": ["flat-pack assembly", "IKEA assembly", "furniture building", "wardrobe assembly", "bed assembly"]
+      }
+    },
+    {
+      "id": "tv-mounting",
+      "type": "Service",
+      "label": "TV Mounting",
+      "attributes": {
+        "slug": "tv-mounting",
+        "category": "interior",
+        "tools": ["stud finder", "drill", "spirit level", "cable management"],
+        "materials": ["TV wall bracket", "wall plugs", "cable trunking", "HDMI cable management"],
+        "synonyms": ["TV wall mount", "television mounting", "TV installation", "wall-mounted TV"]
+      }
+    },
+    {
+      "id": "shelving-installation",
+      "type": "Service",
+      "label": "Shelving & Storage",
+      "attributes": {
+        "slug": "shelving-installation",
+        "category": "interior",
+        "tools": ["drill", "spirit level", "stud finder", "measuring tape"],
+        "materials": ["floating shelf brackets", "alcove shelving", "wall plugs", "shelf boards"],
+        "synonyms": ["shelf fitting", "floating shelves", "alcove shelving", "wall storage", "book shelves"]
+      }
+    },
+    {
+      "id": "curtain-blind-fitting",
+      "type": "Service",
+      "label": "Curtain Rails & Blind Fitting",
+      "attributes": {
+        "slug": "curtain-blind-fitting",
+        "category": "interior",
+        "tools": ["drill", "spirit level", "measuring tape"],
+        "materials": ["curtain pole", "curtain track", "blind brackets", "wall plugs"],
+        "synonyms": ["curtain fitting", "blind installation", "curtain pole fitting", "window blind fitting"]
+      }
+    },
+    {
+      "id": "picture-mirror-hanging",
+      "type": "Service",
+      "label": "Picture & Mirror Hanging",
+      "attributes": {
+        "slug": "picture-mirror-hanging",
+        "category": "interior",
+        "tools": ["drill", "stud finder", "spirit level", "picture hooks"],
+        "materials": ["heavy-duty fixings", "mirror plates", "picture wire", "wall plugs"],
+        "synonyms": ["mirror fitting", "picture hanging", "artwork installation", "gallery wall"]
+      }
+    },
+    {
+      "id": "bathroom-repairs",
+      "type": "Service",
+      "label": "Bathroom Repairs",
+      "attributes": {
+        "slug": "bathroom-repairs",
+        "category": "maintenance",
+        "tools": ["adjustable spanner", "pipe wrench", "pliers", "caulking gun", "tile cutter"],
+        "materials": ["silicone sealant", "grout", "new tap washers", "toilet flush mechanism"],
+        "synonyms": ["bathroom maintenance", "bathroom fix", "wet room repair", "bathroom plumbing"]
+      }
+    },
+    {
+      "id": "silicone-sealing",
+      "type": "Service",
+      "label": "Silicone Sealing",
+      "attributes": {
+        "slug": "silicone-sealing",
+        "category": "maintenance",
+        "parent": "bathroom-repairs",
+        "tools": ["caulking gun", "silicone smoother", "masking tape", "sealant remover"],
+        "materials": ["sanitary-grade silicone sealant", "mould-resistant silicone"],
+        "lifespan_years": "5-10 years",
+        "synonyms": ["caulking", "bath sealing", "shower sealing", "re-sealing", "mastic sealing"]
+      }
+    },
+    {
+      "id": "minor-plumbing",
+      "type": "Service",
+      "label": "Minor Plumbing",
+      "attributes": {
+        "slug": "minor-plumbing",
+        "category": "maintenance",
+        "tools": ["adjustable spanner", "pipe cutter", "PTFE tape", "basin wrench"],
+        "materials": ["tap washers", "O-rings", "push-fit connectors", "isolation valves"],
+        "regulations": ["Part L Building Regulations for water efficiency"],
+        "synonyms": ["plumbing repairs", "tap replacement", "toilet repair", "basic plumbing"]
+      }
+    },
+    {
+      "id": "minor-electrical",
+      "type": "Service",
+      "label": "Minor Electrical Work",
+      "attributes": {
+        "slug": "minor-electrical",
+        "category": "maintenance",
+        "tools": ["voltage tester", "screwdriver set", "wire stripper", "multimeter"],
+        "materials": ["light fittings", "switches", "sockets", "cable clips"],
+        "regulations": ["Part P Building Regulations", "BS7671 Wiring Regulations", "Competent Person Scheme"],
+        "synonyms": ["electrical repairs", "light fitting replacement", "socket change", "electrical maintenance"]
+      }
+    },
+    {
+      "id": "window-repairs",
+      "type": "Service",
+      "label": "Window Repairs",
+      "attributes": {
+        "slug": "window-repairs",
+        "category": "maintenance",
+        "tools": ["glazing tools", "drill", "screwdriver", "draught excluder tape"],
+        "materials": ["uPVC handles", "window restrictors", "draught excluder", "hinges", "locking mechanisms"],
+        "synonyms": ["uPVC window repair", "window lock repair", "blown double glazing", "window maintenance"]
+      }
+    },
+    {
+      "id": "kitchen-fitting",
+      "type": "Service",
+      "label": "Kitchen Fitting",
+      "attributes": {
+        "slug": "kitchen-fitting",
+        "category": "interior",
+        "tools": ["jigsaw", "drill", "spirit level", "laser level", "router"],
+        "materials": ["kitchen units", "worktop", "kickboards", "cornice", "pelmet", "sink", "taps"],
+        "synonyms": ["kitchen installation", "kitchen assembly", "kitchen fitting", "flat-pack kitchen"]
+      }
+    },
+    {
+      "id": "pressure-washing",
+      "type": "Service",
+      "label": "Pressure Washing",
+      "attributes": {
+        "slug": "pressure-washing",
+        "category": "exterior",
+        "tools": ["pressure washer", "rotary surface cleaner", "turbo nozzle", "detergent tank"],
+        "surfaces": ["driveway", "patio", "decking", "render", "brickwork", "paths", "walls"],
+        "synonyms": ["jet washing", "power washing", "driveway cleaning", "patio cleaning", "render cleaning"]
+      }
+    },
+    {
+      "id": "fence-repairs",
+      "type": "Service",
+      "label": "Fence Repairs",
+      "attributes": {
+        "slug": "fence-repairs",
+        "category": "exterior",
+        "tools": ["post hole digger", "spirit level", "saw", "drill", "post rammer"],
+        "materials": ["fence panel", "fence post", "concrete", "gravel boards", "post caps", "wood preservative"],
+        "lifespan_years": "softwood 10-15 years, hardwood/composite 25+ years",
+        "synonyms": ["fence replacement", "fence panel replacement", "garden fencing", "fence installation"]
+      }
+    },
+    {
+      "id": "decking",
+      "type": "Service",
+      "label": "Decking",
+      "attributes": {
+        "slug": "decking",
+        "category": "exterior",
+        "tools": ["saw", "drill", "decking screws", "spirit level", "string line"],
+        "materials": ["timber decking boards", "composite decking", "decking joists", "decking screws", "non-slip strips"],
+        "lifespan_years": "timber 10-15 years treated, composite 25-30 years",
+        "synonyms": ["garden decking", "timber decking", "composite decking", "decking installation"]
+      }
+    },
+    {
+      "id": "garden-maintenance",
+      "type": "Service",
+      "label": "Garden Maintenance",
+      "attributes": {
+        "slug": "garden-maintenance",
+        "category": "exterior",
+        "tools": ["lawnmower", "hedge trimmer", "strimmer", "secateurs", "rake", "wheelbarrow"],
+        "tasks": ["hedge trimming", "lawn mowing", "weeding", "garden clearance", "leaf clearing"],
+        "synonyms": ["garden tidying", "garden clearance", "hedge cutting", "lawn maintenance", "garden care"]
+      }
+    },
+    {
+      "id": "shed-repairs",
+      "type": "Service",
+      "label": "Shed Repairs",
+      "attributes": {
+        "slug": "shed-repairs",
+        "category": "exterior",
+        "tools": ["staple gun", "saw", "drill", "felt adhesive applicator"],
+        "materials": ["shed felt", "roofing felt", "shed timber", "shed door hinges", "shed screws"],
+        "synonyms": ["shed maintenance", "shed roof repair", "garden shed repair", "outbuilding repair"]
+      }
+    },
+    {
+      "id": "gutter-cleaning",
+      "type": "Service",
+      "label": "Gutter Cleaning",
+      "attributes": {
+        "slug": "gutter-cleaning",
+        "category": "exterior",
+        "tools": ["ladder", "gutter scoop", "garden hose", "gutter vacuum", "safety equipment"],
+        "seasonal": "recommended annually, ideally autumn after leaf fall",
+        "synonyms": ["gutter clearing", "gutter unblocking", "fascia cleaning", "downpipe clearing"]
+      }
+    },
+    {
+      "id": "emergency-repairs",
+      "type": "Service",
+      "label": "Emergency Repairs",
+      "attributes": {
+        "slug": "emergency-repairs",
+        "category": "emergency",
+        "responseTime": "same-day",
+        "common": ["broken door", "broken window", "storm damage", "flood damage", "security boarding up"],
+        "synonyms": ["emergency handyman", "same-day repairs", "urgent repairs", "immediate repairs"]
+      }
+    },
+    {
+      "id": "landlord-services",
+      "type": "Service",
+      "label": "Landlord Services",
+      "attributes": {
+        "slug": "landlord-services",
+        "category": "commercial",
+        "tasks": ["end-of-tenancy repairs", "void property maintenance", "lock changes", "safety inspections", "painting between tenants"],
+        "synonyms": ["landlord maintenance", "rental property repairs", "tenant void repairs", "buy-to-let maintenance"]
+      }
+    },
+    {
+      "id": "commercial-handyman",
+      "type": "Service",
+      "label": "Commercial Handyman",
+      "attributes": {
+        "slug": "commercial-handyman",
+        "category": "commercial",
+        "sectors": ["offices", "retail", "hospitality", "schools", "care homes", "churches", "industrial units"],
+        "synonyms": ["commercial maintenance", "facilities management support", "business handyman", "FM handyman"]
+      }
+    },
+    {
+      "id": "maintenance-contracts",
+      "type": "Service",
+      "label": "Maintenance Contracts",
+      "attributes": {
+        "slug": "maintenance-contracts",
+        "category": "commercial",
+        "types": ["monthly rolling", "annual planned preventive maintenance", "reactive call-out contract"],
+        "synonyms": ["PPM contract", "planned maintenance", "maintenance agreement", "service contract"]
+      }
+    },
+    {
+      "id": "loft-boarding",
+      "type": "Service",
+      "label": "Loft Boarding",
+      "attributes": {
+        "slug": "loft-boarding",
+        "category": "interior",
+        "tools": ["drill", "saw", "loft boarding legs", "screwdriver"],
+        "materials": ["loft boards", "loft legs", "loft hatch", "loft ladder", "insulation"],
+        "synonyms": ["loft conversion prep", "loft storage", "loft floor", "loft hatch installation"]
+      }
+    },
+    {
+      "id": "garage-door-repair",
+      "type": "Service",
+      "label": "Garage Door Repair",
+      "attributes": {
+        "slug": "garage-door-repair",
+        "category": "exterior",
+        "tools": ["drill", "spanner", "cable", "spring tools"],
+        "materials": ["garage door springs", "cables", "roller bearings", "door panels", "locking mechanism"],
+        "synonyms": ["garage door fix", "garage maintenance", "up-and-over door repair", "roller door repair"]
+      }
+    },
+    {
+      "id": "walsall",
+      "type": "Location",
+      "label": "Walsall",
+      "attributes": {
+        "region": "West Midlands",
+        "country": "UK",
+        "postcodes": ["WS1", "WS2", "WS3", "WS4", "WS5"],
+        "type": "town"
+      }
+    },
+    {
+      "id": "west-midlands",
+      "type": "Region",
+      "label": "West Midlands",
+      "attributes": {
+        "country": "UK"
+      }
+    }
+  ],
+  "edges": [
+    { "from": "el-the-man", "to": "handyman-services", "relationship": "provides" },
+    { "from": "el-the-man", "to": "walsall", "relationship": "basedIn" },
+    { "from": "handyman-services", "to": "painting-decorating", "relationship": "includes" },
+    { "from": "handyman-services", "to": "carpentry", "relationship": "includes" },
+    { "from": "handyman-services", "to": "flooring", "relationship": "includes" },
+    { "from": "handyman-services", "to": "tiling", "relationship": "includes" },
+    { "from": "handyman-services", "to": "plastering", "relationship": "includes" },
+    { "from": "handyman-services", "to": "furniture-assembly", "relationship": "includes" },
+    { "from": "handyman-services", "to": "tv-mounting", "relationship": "includes" },
+    { "from": "handyman-services", "to": "shelving-installation", "relationship": "includes" },
+    { "from": "handyman-services", "to": "curtain-blind-fitting", "relationship": "includes" },
+    { "from": "handyman-services", "to": "picture-mirror-hanging", "relationship": "includes" },
+    { "from": "handyman-services", "to": "bathroom-repairs", "relationship": "includes" },
+    { "from": "handyman-services", "to": "silicone-sealing", "relationship": "includes" },
+    { "from": "handyman-services", "to": "minor-plumbing", "relationship": "includes" },
+    { "from": "handyman-services", "to": "minor-electrical", "relationship": "includes" },
+    { "from": "handyman-services", "to": "window-repairs", "relationship": "includes" },
+    { "from": "handyman-services", "to": "kitchen-fitting", "relationship": "includes" },
+    { "from": "handyman-services", "to": "pressure-washing", "relationship": "includes" },
+    { "from": "handyman-services", "to": "fence-repairs", "relationship": "includes" },
+    { "from": "handyman-services", "to": "decking", "relationship": "includes" },
+    { "from": "handyman-services", "to": "garden-maintenance", "relationship": "includes" },
+    { "from": "handyman-services", "to": "shed-repairs", "relationship": "includes" },
+    { "from": "handyman-services", "to": "gutter-cleaning", "relationship": "includes" },
+    { "from": "handyman-services", "to": "emergency-repairs", "relationship": "includes" },
+    { "from": "handyman-services", "to": "landlord-services", "relationship": "includes" },
+    { "from": "handyman-services", "to": "commercial-handyman", "relationship": "includes" },
+    { "from": "handyman-services", "to": "maintenance-contracts", "relationship": "includes" },
+    { "from": "handyman-services", "to": "loft-boarding", "relationship": "includes" },
+    { "from": "handyman-services", "to": "garage-door-repair", "relationship": "includes" },
+    { "from": "carpentry", "to": "door-fitting", "relationship": "includes" },
+    { "from": "carpentry", "to": "lock-changes", "relationship": "includes" },
+    { "from": "carpentry", "to": "shelving-installation", "relationship": "includes" },
+    { "from": "bathroom-repairs", "to": "silicone-sealing", "relationship": "commonlyBundledWith" },
+    { "from": "bathroom-repairs", "to": "tiling", "relationship": "commonlyBundledWith" },
+    { "from": "bathroom-repairs", "to": "minor-plumbing", "relationship": "commonlyBundledWith" },
+    { "from": "painting-decorating", "to": "plastering", "relationship": "commonlyBundledWith" },
+    { "from": "painting-decorating", "to": "carpentry", "relationship": "commonlyBundledWith" },
+    { "from": "flooring", "to": "painting-decorating", "relationship": "commonlyBundledWith" },
+    { "from": "flooring", "to": "carpentry", "relationship": "commonlyBundledWith" },
+    { "from": "kitchen-fitting", "to": "tiling", "relationship": "commonlyBundledWith" },
+    { "from": "kitchen-fitting", "to": "minor-plumbing", "relationship": "commonlyBundledWith" },
+    { "from": "kitchen-fitting", "to": "minor-electrical", "relationship": "commonlyBundledWith" },
+    { "from": "door-fitting", "to": "lock-changes", "relationship": "commonlyBundledWith" },
+    { "from": "fence-repairs", "to": "garden-maintenance", "relationship": "commonlyBundledWith" },
+    { "from": "decking", "to": "pressure-washing", "relationship": "commonlyBundledWith" },
+    { "from": "landlord-services", "to": "painting-decorating", "relationship": "commonlyRequires" },
+    { "from": "landlord-services", "to": "flooring", "relationship": "commonlyRequires" },
+    { "from": "landlord-services", "to": "lock-changes", "relationship": "commonlyRequires" },
+    { "from": "landlord-services", "to": "minor-plumbing", "relationship": "commonlyRequires" },
+    { "from": "landlord-services", "to": "silicone-sealing", "relationship": "commonlyRequires" },
+    { "from": "emergency-repairs", "to": "door-fitting", "relationship": "mayInclude" },
+    { "from": "emergency-repairs", "to": "lock-changes", "relationship": "mayInclude" },
+    { "from": "emergency-repairs", "to": "window-repairs", "relationship": "mayInclude" },
+    { "from": "walsall", "to": "west-midlands", "relationship": "partOf" },
+    { "from": "el-the-man", "to": "painting-decorating", "relationship": "offers" },
+    { "from": "el-the-man", "to": "carpentry", "relationship": "offers" },
+    { "from": "el-the-man", "to": "door-fitting", "relationship": "offers" },
+    { "from": "el-the-man", "to": "lock-changes", "relationship": "offers" },
+    { "from": "el-the-man", "to": "flooring", "relationship": "offers" },
+    { "from": "el-the-man", "to": "tiling", "relationship": "offers" },
+    { "from": "el-the-man", "to": "plastering", "relationship": "offers" },
+    { "from": "el-the-man", "to": "furniture-assembly", "relationship": "offers" },
+    { "from": "el-the-man", "to": "tv-mounting", "relationship": "offers" },
+    { "from": "el-the-man", "to": "shelving-installation", "relationship": "offers" },
+    { "from": "el-the-man", "to": "curtain-blind-fitting", "relationship": "offers" },
+    { "from": "el-the-man", "to": "picture-mirror-hanging", "relationship": "offers" },
+    { "from": "el-the-man", "to": "bathroom-repairs", "relationship": "offers" },
+    { "from": "el-the-man", "to": "silicone-sealing", "relationship": "offers" },
+    { "from": "el-the-man", "to": "minor-plumbing", "relationship": "offers" },
+    { "from": "el-the-man", "to": "minor-electrical", "relationship": "offers" },
+    { "from": "el-the-man", "to": "window-repairs", "relationship": "offers" },
+    { "from": "el-the-man", "to": "kitchen-fitting", "relationship": "offers" },
+    { "from": "el-the-man", "to": "pressure-washing", "relationship": "offers" },
+    { "from": "el-the-man", "to": "fence-repairs", "relationship": "offers" },
+    { "from": "el-the-man", "to": "decking", "relationship": "offers" },
+    { "from": "el-the-man", "to": "garden-maintenance", "relationship": "offers" },
+    { "from": "el-the-man", "to": "shed-repairs", "relationship": "offers" },
+    { "from": "el-the-man", "to": "gutter-cleaning", "relationship": "offers" },
+    { "from": "el-the-man", "to": "emergency-repairs", "relationship": "offers" },
+    { "from": "el-the-man", "to": "landlord-services", "relationship": "offers" },
+    { "from": "el-the-man", "to": "commercial-handyman", "relationship": "offers" },
+    { "from": "el-the-man", "to": "maintenance-contracts", "relationship": "offers" },
+    { "from": "el-the-man", "to": "loft-boarding", "relationship": "offers" },
+    { "from": "el-the-man", "to": "garage-door-repair", "relationship": "offers" }
+  ]
+}
