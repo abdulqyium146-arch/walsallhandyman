@@ -37,8 +37,32 @@ export default function HomePage() {
     <>
       {/* ── Hero ── */}
       <section className="bg-[#0F1A2E] relative overflow-hidden" aria-label="Hero">
-        <div className="absolute top-0 left-0 right-0 h-1 bg-[#C9933A]" aria-hidden="true" />
-        <Container className="py-16 md:py-24 lg:py-32">
+        {/* Background hero photo — real job, living room transformation Walsall */}
+        <Image
+          src="/images/painting-decorating/painting-decorating-living-room-feature-arch-flooring-walsall.webp"
+          alt=""
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
+          style={{ opacity: 0.35 }}
+        />
+        {/* Left-to-right gradient: solid navy behind text, fades right so image shows */}
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(to right, #0F1A2E 45%, #0F1A2E99 70%, #0F1A2E55 100%)' }}
+          aria-hidden="true"
+        />
+        {/* Bottom vignette so trust bar blends naturally */}
+        <div
+          className="absolute inset-0"
+          style={{ background: 'linear-gradient(to top, #0F1A2E 0%, transparent 30%)' }}
+          aria-hidden="true"
+        />
+        {/* Gold accent bar */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-[#C9933A] z-10" aria-hidden="true" />
+
+        <Container className="py-16 md:py-24 lg:py-32 relative z-10">
           <div className="max-w-3xl">
             <p className="text-[#C9933A] font-semibold uppercase tracking-wider text-sm mb-4">
               Walsall &amp; West Midlands
@@ -47,19 +71,19 @@ export default function HomePage() {
               One call.<br />
               <span className="text-[#C9933A]">We do it all.</span>
             </h1>
-            <p className="text-lg text-white/70 mb-8 max-w-2xl leading-relaxed">
+            <p className="text-lg text-white/80 mb-8 max-w-2xl leading-relaxed">
               El The Man is your reliable, all-in-one handyman in Walsall and the West Midlands — covering interior,
               exterior, maintenance, and emergency repairs. Can do it? Yes, we can.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="tel:+447861203087"
-                className="inline-flex items-center justify-center gap-2 bg-[#C9933A] hover:bg-[#B07F2A] text-white font-bold text-lg px-8 py-4 rounded-xl transition-colors shadow-[0_4px_24px_0_rgba(201,147,58,0.3)]"
+                className="inline-flex items-center justify-center gap-2 bg-[#C9933A] hover:bg-[#B07F2A] text-white font-bold text-lg px-8 py-4 rounded-xl transition-colors shadow-[0_4px_24px_0_rgba(201,147,58,0.35)]"
               >
                 <PhoneIcon />
                 Call 07861 203087
               </a>
-              <Button href="/contact" variant="ghost" size="lg" className="border-white/30 text-white hover:bg-white/10 hover:border-white/50">
+              <Button href="/contact" variant="ghost" size="lg" className="border-white/40 text-white hover:bg-white/10 hover:border-white/60">
                 Free Quote
               </Button>
             </div>
@@ -67,7 +91,7 @@ export default function HomePage() {
         </Container>
 
         {/* Trust bar */}
-        <div className="bg-[#1B2B4B] border-t border-white/10">
+        <div className="bg-[#1B2B4B]/95 border-t border-white/10 relative z-10 backdrop-blur-sm">
           <Container className="py-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {TRUST_SIGNALS.map((signal) => (
