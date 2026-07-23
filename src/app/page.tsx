@@ -29,6 +29,83 @@ const FEATURED_SLUGS = [
   'silicone-sealing', 'gutter-cleaning',
 ]
 
+// Real job photos — all 12 curated from 27 converted images, one per job type
+const PORTFOLIO: { src: string; alt: string; label: string; href: string; featured?: boolean }[] = [
+  {
+    src: '/images/painting-decorating/painting-decorating-living-room-feature-arch-flooring-walsall.webp',
+    alt: 'Living room redecorated with sage green walls, terracotta arch and new LVT flooring in Walsall',
+    label: 'Living Room Repaint & Flooring',
+    href: '/services/painting-decorating',
+    featured: true,
+  },
+  {
+    src: '/images/painting-decorating/painting-decorating-bedroom-completed-grey-skirting-walsall.webp',
+    alt: 'Bedroom decorated with grey walls, white skirting and new laminate floor in Walsall',
+    label: 'Full Bedroom Decoration',
+    href: '/services/painting-decorating',
+  },
+  {
+    src: '/images/painting-decorating/painting-decorating-room-new-vinyl-flooring-walsall.webp',
+    alt: 'Room repainted and new luxury vinyl LVT flooring laid in Walsall',
+    label: 'Paint & New LVT Flooring',
+    href: '/services/painting-decorating',
+  },
+  {
+    src: '/images/furniture-assembly/flat-pack-dressing-table-hollywood-mirror-assembled-walsall.webp',
+    alt: 'Flat pack Hollywood mirror dressing table assembled from box in Walsall',
+    label: 'Dressing Table Assembly',
+    href: '/services/furniture-assembly',
+  },
+  {
+    src: '/images/carpentry/stair-handrail-fitted-walsall.webp',
+    alt: 'Stair handrail professionally fitted before and after in Walsall',
+    label: 'Stair Handrail Fitted',
+    href: '/services/carpentry',
+  },
+  {
+    src: '/images/furniture-assembly/venetian-blind-fitted-living-room-walsall.webp',
+    alt: 'White venetian blind fitted to living room window in Walsall',
+    label: 'Venetian Blind Fitting',
+    href: '/services/furniture-assembly',
+  },
+  {
+    src: '/images/emergency-repairs/ring-camera-installation-walsall.webp',
+    alt: 'Ring doorbell and floodlight camera installed on brick house exterior in Walsall',
+    label: 'Ring Camera Installation',
+    href: '/services/emergency-repairs',
+  },
+  {
+    src: '/images/carpentry/brass-coat-hooks-fitted-hallway-walsall.webp',
+    alt: 'Three brass coat hooks fitted to hallway wall in Walsall',
+    label: 'Coat Hooks Fitted',
+    href: '/services/carpentry',
+  },
+  {
+    src: '/images/fence-repairs/shed-window-glass-replacement-walsall.webp',
+    alt: 'Garden shed window glass replaced before and after in Walsall',
+    label: 'Shed Glass Repair',
+    href: '/services/fence-repairs',
+  },
+  {
+    src: '/images/furniture-assembly/flat-pack-desk-assembled-walsall.webp',
+    alt: 'Flat pack desk with hairpin legs built and ready to use in Walsall',
+    label: 'Flat Pack Desk Assembly',
+    href: '/services/furniture-assembly',
+  },
+  {
+    src: '/images/furniture-assembly/kitchen-bamboo-blind-fitted-walsall.webp',
+    alt: 'Natural bamboo roller blind fitted to kitchen window above sink in Walsall',
+    label: 'Kitchen Blind Fitting',
+    href: '/services/furniture-assembly',
+  },
+  {
+    src: '/images/emergency-repairs/garden-tap-replacement-walsall.webp',
+    alt: 'Leaking outdoor garden tap replaced with new brass fitting in Walsall',
+    label: 'Garden Tap Replaced',
+    href: '/services/emergency-repairs',
+  },
+]
+
 export default function HomePage() {
   const featuredServices = SERVICES.filter((s) => FEATURED_SLUGS.includes(s.slug))
   const localAreas = LOCATIONS.filter((l) => l.type !== 'nearby').slice(0, 8)
@@ -150,6 +227,63 @@ export default function HomePage() {
                 </div>
               )
             })}
+          </div>
+        </Container>
+      </section>
+
+      {/* ── Our Work Portfolio ── */}
+      <section className="py-16 bg-[#0F1A2E]" aria-labelledby="portfolio-heading">
+        <Container>
+          <div className="flex items-end justify-between mb-10 gap-4 flex-wrap">
+            <div>
+              <p className="text-[#C9933A] font-semibold uppercase tracking-wider text-sm mb-2">Portfolio</p>
+              <h2 id="portfolio-heading" className="text-3xl font-bold font-display text-white">
+                Real Jobs. Real Results.
+              </h2>
+              <p className="text-white/60 mt-2 max-w-xl">
+                Every photo is from an actual completed job in Walsall and the West Midlands.
+              </p>
+            </div>
+            <Link href="/services" className="text-[#C9933A] font-semibold text-sm hover:underline whitespace-nowrap">
+              All services &rarr;
+            </Link>
+          </div>
+
+          {/* Magazine grid: featured image left (2×2), 10 thumbnails right & below */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {PORTFOLIO.map((item, i) => (
+              <Link
+                key={i}
+                href={item.href}
+                className={`group relative overflow-hidden rounded-xl ${
+                  item.featured ? 'col-span-2 row-span-2' : ''
+                }`}
+                style={{ height: item.featured ? undefined : '180px' }}
+              >
+                {/* featured item needs explicit height via wrapper */}
+                <div className={item.featured ? 'relative h-[368px]' : 'relative h-full'}>
+                  <Image
+                    src={item.src}
+                    alt={item.alt}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes={item.featured
+                      ? '(max-width: 768px) 100vw, 50vw'
+                      : '(max-width: 768px) 50vw, 25vw'}
+                    loading={i < 5 ? 'eager' : 'lazy'}
+                  />
+                  {/* dark gradient + label */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  <span className={`absolute bottom-3 left-3 right-3 text-white font-semibold leading-tight ${
+                    item.featured ? 'text-base' : 'text-xs'
+                  }`}>
+                    {item.label}
+                  </span>
+                  {/* hover ring */}
+                  <div className="absolute inset-0 ring-2 ring-[#C9933A] ring-inset opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
+                </div>
+              </Link>
+            ))}
           </div>
         </Container>
       </section>
